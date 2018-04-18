@@ -3,9 +3,7 @@
  *
  * @author daithi coombes <webeire@gmail.com>
  */
-class API{
 
-  
-}
+export default class API{
 
-module.exports = API;
+};
