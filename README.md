@@ -1,23 +1,30 @@
 # crypto-pos
-Point of Sale app for cryptocurrencies
 
-### Mockup
+> CoderForge @ Crypto Cafe
 
-https://app.moqups.com/coderforge.dublin@gmail.com/Rg9grfYN7e/view/page/aa9df7b72
+## Build Setup
 
-### Stack
+``` bash
+# install dependencies
+npm install
 
- - Vue2
- - MDL Lite
-
-### Running
-
-Development
-```bash
+# serve with hot reload at localhost:8080
 npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+
+# run unit tests
+npm run unit
+
+# run e2e tests
+npm run e2e
+
+# run all tests
+npm test
 ```
 
-Building
-```bash
-npm run build
-```
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
