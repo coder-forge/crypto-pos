@@ -67,7 +67,7 @@
 
 <script scoped>
 export default {
-  name: 'Home',
+  name: 'Calc',
   data () {
     return {
       currentVal: 0
@@ -109,39 +109,6 @@ export default {
     }
   }
 }
-/**
- * @see https://codepen.io/hezag/pen/Ywbxjg
- */
-// var calc = "", lastop = "";
-// $("[data-func]").on("click", function() {
-//   var func = $(this).attr('data-func'),
-//       val = $(this).attr('data-val')
-//   if(func == 'number') {
-//     calc += val
-//     $('#display').text(calc)
-//   }
-//   else if(func == 'operation') {
-//     if(val == 'clear') {
-//       if(lastval == 'equals') {
-//         calc = ''
-//       }
-//       calc = calc.toString().slice(0,-1)
-//       $('#display').text(calc)
-//     }
-//     else if(val == 'equals') {
-//       calc = eval(calc.toString())
-//       if(typeof calc == 'undefined') {
-//         calc = ''
-//       }
-//       console.log(calc)
-//       $('#display').text(calc)
-//     } else {
-//       calc += val
-//       $('#display').text(calc)
-//     }
-//   }
-//   let lastval = val
-// })
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
