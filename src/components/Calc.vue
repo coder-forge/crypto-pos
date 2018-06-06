@@ -58,6 +58,12 @@
             <v-btn v-on:click="number(0)" data-val="0">
               0
             </v-btn>
+            <v-btn v-on:click="number('.')" data-val=".">
+              .
+            </v-btn>
+            <v-btn v-on:click="go()" data-val="Go">
+              Go
+            </v-btn>
           </div>
         </div>
       </v-card-actions>
@@ -66,15 +72,27 @@
 </template>
 
 <script scoped>
+// import router from 'vue-router'
 export default {
   name: 'Calc',
   data () {
     return {
-      currentVal: 0
+      address: 0x0,
+      amount: 0,
+      currentVal: 0,
+      chain: 'ethereum'
     }
   },
   methods: {
+    go: function () {
+      // async grab coin amount
+      this.amount = '0.004'
+      console.log('router: ', this.$router)
+      // reroute to {path: '}
+      this.$router.push('/qr/' + this.chain + '/' + this.address + '/' + this.amount)
+    },
     operation: function (char) {
+      let result = 0
       const func = (_char) => ({
         '/': function () {
           console.log('we\'re dividing')
@@ -92,15 +110,16 @@ export default {
           console.log('we\'re equalising')
         },
         'C': function () {
-          console.log('we\'re canceling')
+          result = 0
         }
       })[_char]
 
       const op = func(char)
       op()
+      this.currentVal = result
     },
     number: function (num) {
-      if (this.currentVal === 0) this.currentVal = num
+      if (this.currentVal === 0 && num !== '.') this.currentVal = num
       else {
         this.currentVal += '' + num
       }
