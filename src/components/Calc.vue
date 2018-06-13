@@ -3,8 +3,8 @@
 
     <p>
       <ul>
-        <li>Repo: <a href="https://github.com/coder-forge/crypto-pos" target="new">https://github.com/coder-forge/crypto-pos</a></li>
-        <li>Moqup: <a href="https://app.moqups.com/coderforge.dublin@gmail.com/Rg9grfYN7e/view/page/aa9df7b72">https://app.moqups.com/coderforge.dublin@gmail.com/Rg9grfYN7e/view/page/aa9df7b72</a></li>
+        <li>Repo: <a href="https://github.com/coder-forge/crypto-pos" target="_new">https://github.com/coder-forge/crypto-pos</a></li>
+        <li>Moqup: <a href="https://app.moqups.com/coderforge.dublin@gmail.com/Rg9grfYN7e/view/page/aa9df7b72" target="_new">https://app.moqups.com/coderforge.dublin@gmail.com/Rg9grfYN7e/view/page/aa9df7b72</a></li>
       </ul>
     </p>
 
@@ -85,18 +85,13 @@ export default {
   data () {
     return {
       address: 0x0,
-      amount: 0,
       currentVal: 0,
       chain: 'ethereum'
     }
   },
   methods: {
     go: function () {
-      // async grab coin amount
-      this.amount = '0.004'
-      console.log('router: ', this.$router)
-      // reroute to {path: '}
-      this.$router.push('/qr/' + this.chain + '/' + this.address + '/' + this.amount)
+      this.$router.push('/qr/' + this.chain + '/' + this.address + '/' + this.currentVal)
     },
     operation: function (char) {
       let result = 0
