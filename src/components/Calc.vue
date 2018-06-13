@@ -1,6 +1,13 @@
 <template>
   <v-container fluid>
 
+    <p>
+      <ul>
+        <li>Repo: <a href="https://github.com/coder-forge/crypto-pos" target="new">https://github.com/coder-forge/crypto-pos</a></li>
+        <li>Moqup: <a href="https://app.moqups.com/coderforge.dublin@gmail.com/Rg9grfYN7e/view/page/aa9df7b72">https://app.moqups.com/coderforge.dublin@gmail.com/Rg9grfYN7e/view/page/aa9df7b72</a></li>
+      </ul>
+    </p>
+
     <v-card class="mdl-card mdl-shadow--2dp">
       <v-card-title primary-title>
         <h2 class="mdl-card__title-text" id="display">{{currentVal}}</h2>
